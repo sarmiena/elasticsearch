@@ -167,6 +167,8 @@ public class GeoShapeQueryParser implements QueryParser {
             return new SpatialArgs(SpatialOperation.Intersects, shape);
         case WITHIN:
             return new SpatialArgs(SpatialOperation.IsWithin, shape);
+        case CONTAINS:
+            return new SpatialArgs(SpatialOperation.Contains, shape);
         default:
             throw new ElasticSearchIllegalArgumentException("");
         
